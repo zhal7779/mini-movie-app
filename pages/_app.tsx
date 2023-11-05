@@ -1,6 +1,11 @@
 import '../styles/globals.css';
 import Layout from '../components/layout';
-export default function MyApp({ Component, pageProps }) {
+
+type Props = {
+  Component: React.ComponentType<any>;
+  pageProps: {};
+};
+export default function MyApp({ Component, pageProps }: Props) {
   return (
     <Layout>
       <Component {...pageProps} />

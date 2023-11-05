@@ -78,6 +78,7 @@ export default function Home({ results }: Response) {
   );
 }
 
+//getServerSideProps 서버에서만 실행
 export async function getServerSideProps() {
   const { results } = await (
     await fetch(`http://localhost:3000/api/movies`)
